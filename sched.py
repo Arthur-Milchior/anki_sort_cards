@@ -35,3 +35,6 @@ def sortCids(self, cids, params, start=None, step=1):
         card.flush()
         start += step
     return cards
+
+def sortDid(self, did, params, start=None, step=1):
+    return sortCids(mw.col.decks.cids(did, True), params, start, step)
