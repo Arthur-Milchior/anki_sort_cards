@@ -78,9 +78,10 @@ sort is as follows:
 * "card position": sort cards according to their position in the note
 * "note creation": sort according to the date of creation of the note
 * "mod": sort according to the last time the note was modified
-* "card creation": sort according to the date of creation of
-the card.
-* "random": sort randomly in case of ambiguity in the previous cases.
+* "note random": sort randomly notes; but leave cards of the same note
+  together.
+* "card creation": sort according to the date of creation of the card.
+* "card random": sort randomly in case of ambiguity in the previous cases.
 
 Note that there are no equality in the two last cases; the order is
 complete, so it's useless to add more parameters after "card creation"

@@ -1,6 +1,8 @@
 from anki.hooks import addHook
 from .sched import sortDid
 from aqt import mw
+from anki.lang import _
+from aqt.utils import getText
 
 def addActionToGear(fun, text):
     """fun -- takes an argument, the did
@@ -16,7 +18,7 @@ def _sort(did):
     (params, ret) = getText("How to sort those cards", default=params)
     if not ret:
         return
-    deck.conf["special sort"] = params
+    deck["special sort"] = params
     mw.col.decks.save(deck)
     sortDid(did, f"[{params}]")
 

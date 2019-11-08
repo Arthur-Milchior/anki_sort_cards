@@ -1,3 +1,5 @@
+from .consts import CARD_NEW
+
 # Methods to sort new card
 ######################################################
 def isNew(note):
