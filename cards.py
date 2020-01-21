@@ -1,3 +1,5 @@
+import sys
+
 from .notes import isNew, isNotNew
 
 nidToRand = dict()
@@ -28,6 +30,8 @@ def toTup(card, params):
             val = nidToRand[card.nid]
         elif param == "card random":
             val = (random())
+        else:
+            print(f"""Pramaeter "{param}" unkwnown and thus ignored.""", sys.stderr)
         if reverse:
             val = -val
         l.append(val)
