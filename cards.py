@@ -1,5 +1,5 @@
 import sys
-
+from random import random
 from .notes import isNew, isNotNew
 
 nidToRand = dict()
