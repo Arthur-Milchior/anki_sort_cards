@@ -5,6 +5,7 @@ from .notes import isNotNew
 import json
 from .notes import isNew
 
+
 def sortCids(cids, params, start=None, step=1):
     """Re-order all new cards whose id belong to cids
       The order of the cards is given in parameters. Sorting is done
@@ -33,7 +34,7 @@ def sortCids(cids, params, start=None, step=1):
         start = mw.col.nextID("pos")
     cards = []
     for cid in cids:
-        card = mw.col.getCard(cid) 
+        card = mw.col.getCard(cid)
         if card.type == CARD_NEW:
             cards.append(card)
     cards.sort(key=lambda card: toTup(card, params))
@@ -42,6 +43,7 @@ def sortCids(cids, params, start=None, step=1):
         card.flush()
         start += step
     return cards
+
 
 def sortDid(did, params, start=None, step=1):
     cids = mw.col.decks.cids(did, True)

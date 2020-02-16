@@ -3,6 +3,8 @@ from random import random
 from .notes import isNew, isNotNew
 
 nidToRand = dict()
+
+
 def toTup(card, params):
     """A tuple to sort the card. See bothSched.sortCids to get more
     informations."""
@@ -13,9 +15,9 @@ def toTup(card, params):
         else:
             reverse = False
         if param == "new first":
-            val = (isNotNew(card.note()))#false occurs first in list
+            val = (isNotNew(card.note()))  # false occurs first in list
         elif param == "seen first":
-            val = (isNew(card.note()))#false occurs first in list
+            val = (isNew(card.note()))  # false occurs first in list
         elif param in {"ord", "card position"}:
             val = (card.ord)
         elif param == "note creation":

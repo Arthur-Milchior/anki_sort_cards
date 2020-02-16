@@ -4,6 +4,7 @@ from aqt import mw
 from anki.lang import _
 from aqt.utils import getText
 
+
 def addActionToGear(fun, text):
     """fun -- takes an argument, the did
     text -- what's written in the gear."""
@@ -11,6 +12,7 @@ def addActionToGear(fun, text):
         a = m.addAction(text)
         a.triggered.connect(lambda b, did=did: fun(did))
     addHook("showDeckOptions", aux)
+
 
 def _sort(did):
     deck = mw.col.decks.get(did)
@@ -21,5 +23,6 @@ def _sort(did):
     deck["special sort"] = params
     mw.col.decks.save(deck)
     sortDid(did, f"[{params}]")
+
 
 addActionToGear(_sort, _("Sort"))
