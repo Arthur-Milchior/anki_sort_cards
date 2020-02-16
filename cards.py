@@ -10,10 +10,10 @@ def toTup(card, params):
     informations."""
     l = []
     for param in params:
-        if isinstance(param, tuple):
-            param, reverse = param
-        else:
+        if isinstance(param, str):
             reverse = False
+        else: # list (semantically a tuple)
+            param, reverse = param
         if param == "new first":
             val = (isNotNew(card.note()))  # false occurs first in list
         elif param == "seen first":
