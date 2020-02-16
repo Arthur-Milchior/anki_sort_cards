@@ -71,7 +71,7 @@ and `` are omitted.)
 
 Sorting is done according to first parameter. In case of equality
 according to second parameter. And so on. A paramater is either a
-string `"rule"`, or a pair `("rule", False)`. If it is a string, the
+string `"rule"`, or a pair `["rule", true]`. If it is a string, the
 sort is as follows:
 * "seen first": show siblings of cards which have already been seen.
 * "new first": show notes whose no card have been seen first
@@ -87,7 +87,8 @@ Note that there are no equality in the two last cases; the order is
 complete, so it's useless to add more parameters after "card creation"
 or after "random".
 
-If the parameter is a pair, it means this order is reversed.
+If the parameter is a pair, the second element must be "true" (without
+the quotes) and it means this order is reversed.
 
 ### Example
 Let's explain the examples given above.
