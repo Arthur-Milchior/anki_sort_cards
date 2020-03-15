@@ -66,8 +66,8 @@ need to add things to the deck regularly.
 
 ## Configuration
 The configuration is given by a list of parameter, separated by
-commas. (Technically, this is a json list, where the enclosings ``
-and `` are omitted.)
+commas. (Technically, this is a json list, where the enclosings `[`
+and `]` are omitted.)
 
 Sorting is done according to first parameter. In case of equality
 according to second parameter. And so on. A paramater is either a
