@@ -33,7 +33,7 @@ def toTup(card, params):
         elif param == "card random":
             val = (random())
         else:
-            print(f"""Pramaeter "{param}" unkwnown and thus ignored.""", sys.stderr)
+            print(f"""Paramater "{param}" unkwnown and thus ignored.""", sys.stderr)
         if reverse:
             val = -val
         l.append(val)
