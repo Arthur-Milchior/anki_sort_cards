@@ -19,11 +19,11 @@ def addToBrowser(fun, text, shortcut=None):
 
 def sort(self):
     cids = self.selectedCards()
-    params = self.col.conf.get("special sort", "")
+    params = self.col.get_config("special sort", "")
     (params, ret) = getText("How to sort those cards", self, default=params)
     if not ret:
         return
-    self.col.conf["special sort"] = params
+    self.col.set_config("special sort", params)
     sortCids(cids, f"[{params}]")
 
 
